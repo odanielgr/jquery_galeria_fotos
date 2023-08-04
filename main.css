@@ -1,0 +1,86 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+}
+
+header {
+    background-color: #5f27cd;
+    color: #fff;
+    padding: 16px 0;
+    display: flex; /* Para deixar o botão ao lado do título */
+    border-bottom: 16px solid #341f97;
+    justify-content: center; /* Para centralizar tudo ao centro */
+    text-transform: uppercase;
+    font-style: italic;
+}
+
+header button {
+    margin-left: 16px;
+}
+
+form {
+    background-color: #c8d6e5;
+    padding: 24px 0;
+    text-align: center;
+    display: none;
+}
+
+form h2 {
+    margin-bottom: 16px;
+}
+
+input, button {
+    padding: 8px;
+}
+
+button {
+    cursor: pointer;
+    background-color: #009432;
+    border: none;
+    font-weight: bold;
+    text-transform: uppercase;
+    color: #fff;
+}
+
+#btn-cancelar {
+    background-color: red;
+}
+
+ul {
+    display: flex; /* Para colocar os elementos um ao lado do outro */
+    flex-wrap: wrap; /* Quando os elementos ocuparem toda a tela é criado uma nova linha abaixo */
+}
+
+ul li {
+    max-width: 25%; /* Faz com que fiquem quatro elementos por linha */
+    list-style: none; /* Para tirar o pontinho das listas */
+    position: relative;
+    max-height: 280px;
+}
+
+ul li img {
+    width: 100%; /* A largura máxima do elemento é de 100% */
+    height: 100%;
+}
+
+.imagem-link-style {
+    padding: 16px;
+    background-color: rgba(0, 0, 0, 0.7);
+    position: absolute; /* Para posicionar o elemento no canto inferior. O elemento PAI terá que ter o position relative para não vazar no layout */
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    opacity: 0; /* Com a opacidade 0 a barra fica invisivel */
+}
+
+.imagem-link-style a {
+    color: #fff;
+    text-decoration: none;
+}
+
+ul li:hover .imagem-link-style {
+    opacity: 1; /* Ao passar no elemento a imagem volta a aparecer */
+    transition: all ease 1s; /* Uma transição para ficar mais suave */
+}
